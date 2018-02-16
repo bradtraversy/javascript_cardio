@@ -46,6 +46,7 @@ function reverseString(str) {
 
 // Reversing a string without using built-in function
 // Contributed by - Ankita Patil
+
 function reverseString(str) {
   let reversedString = "";
   
@@ -61,7 +62,6 @@ function reverseString(str) {
 
 function reverseString(str) {
   return str.split("").reduce((reversedString, character) => character + reversedString, "");
-
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
