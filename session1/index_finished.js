@@ -50,9 +50,12 @@ function reverseString(str) {
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
 function isPalindrome(str) {
-  const revString = str.split('').reverse().join('');
+  // const revString = str.split('').reverse().join('');
+  // return revString === str;
 
-  return revString === str;
+  ///////////////////////
+
+  return str === str.split('').reverse().join('');
 }
 
 
@@ -154,7 +157,6 @@ function fizzBuzz() {
      printNum=((i%3*i%5)!==0);
     if(printNum)
        console.log(i);
-    }
   }
 }
 
