@@ -156,19 +156,29 @@ function fizzBuzz() {
 //     }
 //   }
 
-  for(let i = 1; i <= 100; i++) {
-    let printNum=true;
-     if(i % 3 === 0) 
-       console.log('Fizz');
-     if(i % 5 === 0) 
-       console.log('Buzz');
-    // if divisable by 3 then i%3 is zero,
-    // if divisable by 5 then i%5 is zero,
-    // if divisable by 3 or 5 then i%3*i%5 is zero then don't print 
-     printNum=((i%3*i%5)!==0);
-    if(printNum)
-       console.log(i);
+  // for(let i = 1; i <= 100; i++) {
+  //   let printNum=true;
+  //    if(i % 3 === 0) 
+  //      console.log('Fizz');
+  //    if(i % 5 === 0) 
+  //      console.log('Buzz');
+  //   // if divisable by 3 then i%3 is zero,
+  //   // if divisable by 5 then i%5 is zero,
+  //   // if divisable by 3 or 5 then i%3*i%5 is zero then don't print 
+  //    printNum=((i%3*i%5)!==0);
+  //   if(printNum) {
+  //      console.log(i);
+  //   }
+  // }
+  for(var i = 1; i <= 100; i++) {
+    let output = '';
+    if(i % 3 === 0) {
+      output += 'fizz';
     }
+    if(i % 5 === 0) {
+      output += 'buzz';
+    }
+    console.log(output || i);
   }
 }
 
