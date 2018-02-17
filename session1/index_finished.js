@@ -132,6 +132,7 @@ function maxCharacter(str) {
     if(currentChar.char === char){
       currentChar.count++;
     } else {
+      
       if(maxChar.count < currentChar.count){
         maxChar.char = currentChar.char;
         maxChar.count = currentChar.count;
