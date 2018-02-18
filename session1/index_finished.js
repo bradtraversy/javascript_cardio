@@ -44,6 +44,25 @@ function reverseString(str) {
 }
 
 
+// Reversing a string without using built-in function
+// Contributed by - Ankita Patil
+
+function reverseString(str) {
+  let reversedString = "";
+  
+  for(character of str) {
+    reversedString = character + reversedString;
+  }
+  
+  return reversedString;
+}
+
+// Another solution to reverse a string
+// Contributed by Ankita Patil
+
+function reverseString(str) {
+  return str.split("").reduce((reversedString, character) => character + reversedString, "");
+}
 
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
@@ -213,3 +232,29 @@ function fizzBuzz() {
 const output = fizzBuzz();
 
 console.log(output);
+
+
+// Solution 2
+// Author: Ankita Patil
+function fizzBuzz() {
+  for (let i = 1; i <= 100; i++) {
+    let output = "";
+
+    if(i % 3 === 0) {
+      output += 'Fizz';
+    }
+
+    if(i % 5 === 0) {
+      output += 'Buzz';
+    }
+
+    if(output === "") {
+      output = i;
+    }
+
+    console.log(output);
+
+}
+}
+
+console.log(fizzBuzz());
