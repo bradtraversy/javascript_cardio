@@ -134,7 +134,14 @@ function capitalizeLetters(str) {
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
 // ex. maxCharacter('javascript') == 'a'
+
 function maxCharacter(str) {
+  
+  // If string passed is blank, it will throw exception, avoiding it by this check
+  if(str.length == 0){
+    return '';
+  }
+  
   const charMap = {};
   let maxNum = 0;
   let maxChar = '';
@@ -147,16 +154,14 @@ function maxCharacter(str) {
     }
   });
 
-  for(let char in charMap) {
-    // debugger;
-    if(charMap[char] > maxNum) {
-      maxNum = charMap[char];
-      maxChar = char;
-    }
-  }
+  maxChar = keys(charMap).reduce(function(charPrev, charNew){ 
+    return charMap[charPrev] > charMap[charNew] ? charPrev : charNew;
+  });
+
+  // By above logic if there are multiple characters which have same amount of maximum occurances, 
+  // It will print the last one from them
 
   return maxChar;
-
 
   // Here is my version of the algorithm.
   // I put the string into an array and I sort it.
