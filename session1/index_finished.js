@@ -143,8 +143,6 @@ function maxCharacter(str) {
   }
   
   const charMap = {};
-  let maxNum = 0;
-  let maxChar = '';
 
   str.split('').forEach(function(char) {
     if(charMap[char]) {
