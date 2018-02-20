@@ -40,6 +40,20 @@ function reverseString(str) {
 
   //////////////////////
 
+
+  /////////////////////
+
+  // Josep1992 Solution
+
+  // const reverseString = (str) => {
+  //   // reverses the str parameter .
+  //   let string = str.split("").reverse().join("");
+  //   // return's string in reverse.
+  //   return string
+  // };
+
+  ///////////////////
+
   return str.split('').reduce((revString, char) => char + revString, '');
 }
 
@@ -55,7 +69,21 @@ function isPalindrome(str) {
   return revString === str;
 }
 
+///////////////////////////////
 
+// Josep1992 Solution
+
+// const palindrome = (str) => {
+//   // Reverses the string parameter
+//   let reverseOrder = str.split("").reverse().join("");
+//   // String in its normal syntax
+//   let normalOrder = str;
+//   // check if string is = to the reverse order
+//   let result = reverseOrder === normalOrder ? true : false;
+//   return result;
+// };
+
+///////////////////////////////
 
 // CHALLENGE 3: REVERSE AN INTEGER
 // Return an integer in reverse
@@ -67,7 +95,17 @@ function reverseInt(int) {
   return parseInt(revString) * Math.sign(int);
 }
 
+///////////////////////////////
 
+// Josep1992 Solution
+
+// const reverseInt = (int) => {
+//   let numbers = int.toString().split('').reverse().join('');
+//   // return's numbers in reverse.
+//   return Number(numbers);
+// };
+
+//////////////////////////////
 
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
@@ -95,8 +133,6 @@ function capitalizeLetters(str) {
     return char.toUpperCase();
   });
 }
-
-
 
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
@@ -143,7 +179,25 @@ function fizzBuzz() {
   }
 }
 
+//////////////////////////
 
+// Josep1992 Solution
+
+// const fizzBuzz = () => {
+//   for (i = 0; i <= 100; i++) {
+//     if ((i % 3 === 0) && (i % 5 === 0)) {
+//       console.log(`${i} FIZZBUZ`);
+//     } else if (i % 3 === 0) {
+//       console.log(`${i} FIZZ`);
+//     } else if (i % 5 === 0) {
+//       console.log(`${i} BUZZ`);
+//     } else {
+//       console.log(`${i}`);
+//     }
+//   }
+// };
+
+//////////////////////////
 
 // Call Function
 const output = fizzBuzz();
