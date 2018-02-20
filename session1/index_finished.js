@@ -39,6 +39,15 @@ function reverseString(str) {
   // return revString;
 
   //////////////////////
+  
+  
+  //let arr = [...str];
+  //let newArr = arr.map((_, i, arr) => {
+  //     return arr[arr.length - 1 - i];
+  //   });
+  //return newArr.join("");
+
+
 
   return str.split('').reduce((revString, char) => char + revString, '');
 }
