@@ -78,9 +78,10 @@ function reverseString(str) {
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
 
 function isPalindrome(str) {
-  const revString = str.split('').reverse().join('');
-
-  return revString === str;
+  for (let i = 0, j = str.length - 1; i <= j; i++,j--) {
+    if (str[i] !== str[j]) return false;
+  }
+  return true;
 
   ///////////////////////
 
