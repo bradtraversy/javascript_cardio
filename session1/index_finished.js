@@ -147,23 +147,19 @@ function maxCharacter(str) {
   const charMap = {};
   let maxNum = 0;
   let maxChar = '';
-
-  str.split('').forEach(function(char) {
-    if(charMap[char]) {
-      charMap[char]++;
+  
+  for (let i = 0; i < str.length; i++) {
+    if(charMap[str[i]]) {
+      charMap[str[i]]++;
     } else {
-      charMap[char] = 1;
+      charMap[str[i]] = 1;
     }
-  });
-
-  for(let char in charMap) {
-    // debugger;
-    if(charMap[char] > maxNum) {
-      maxNum = charMap[char];
-      maxChar = char;
+    
+    if (charMap[str[i]] > maxNum) {
+    	maxNum = charMap[str[i]];
+      	maxChar = str[i];
     }
-  }
-
+  };
   return maxChar;
 
 
