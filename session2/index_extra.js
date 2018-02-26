@@ -9,7 +9,24 @@
 // ex. longestWord('Hello, my name is Brad') === 'hello'
 // ex. longestWord('Hello there, my name is Brad') === ['hello', 'there']
 
-function longestWord(sen) {}
+function longestWord(sen) {
+  // SOLUTION BY @aweebit
+  //
+  // let maxLetters = 0;
+  // let outputArr = [];
+  // sen.toLowerCase()
+  //   .match(/\w+/g)
+  //   .forEach(word => {
+  //     if (!(word.length < maxLetters)) {
+  //       if (word.length > maxLetters) {
+  //         maxLetters = word.length;
+  //         outputArr = [];
+  //       }
+  //       outputArr.push(word);
+  //     }
+  //   });
+  // return outputArr.length > 1 ? outputArr : outputArr[0];
+}
 
 // CHALLENGE 2: ARRAY CHUNKING
 // Split an array into chunked arrays of a specific length
@@ -36,7 +53,13 @@ function isAnagram(str1, str2) {}
 // Z should turn to A
 // ex. 'hello there' === 'Ifmmp UIfsf'
 
-function letterChanges(str) {}
+function letterChanges(str) {
+  // SOLUTION BY @aweebit
+  // // Practically the same, but within one statement and with a few enhancements
+  // return str.toLowerCase().replace(/[a-z]/g, char => (
+  //   char == 'z' ? 'A' : String.fromCharCode(char.charCodeAt() + 1)
+  // )).replace(/[aeiou]/g, vowel => vowel.toUpperCase());
+}
 
 // Call Function
 const output = longestWord('Hello there, my name is Brad');
