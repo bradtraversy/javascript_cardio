@@ -68,6 +68,17 @@ function maxCharacter(str) {
   //   }
   // });
   // return maxChar.char;
+  // CONTRIBUTED SOLUTION
+  // BY Romain Guilloteau
+  // let letters = {};
+  // str
+  //   .toLowerCase()
+  //   .split('')
+  //   .forEach(l => (letters[l] = letters[l] + 1 || 1));
+  // const sortedLetters = Object.entries(letters)
+  //   .sort((a, b) => a[1] - b[1])
+  //   .map(a => a[0]);
+  // return sortedLetters[sortedLetters.length - 1];
 }
 
 // CHALLENGE 6: FIZZBUZZ
@@ -113,6 +124,14 @@ function fizzBuzz() {
   //     output = i;
   //   }
   //   console.log(output);
+  // }
+  // CONTRIBUTED SOLUTION
+  // BY Romain Guilloteau
+  // for (let i = 1; i <= 100; i++) {
+  //   console.log([
+  //     (i % 3 === 0 ? 'Fizz' : ''),
+  //     (i % 5 === 0 ? 'Buzz' : ''),
+  //   ].join('') || i);
   // }
 }
 
