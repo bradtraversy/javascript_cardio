@@ -12,6 +12,26 @@ function reverseString(str) {
   // CONTRIBUTED SOLUTION
   // BY Ankita Patil
   // return str.split("").reduce((reversedString, character) => character + reversedString, "");
+  
+//SOLUTION BY BLESSING TAYEDZERWA [everbliss7@gmail.com]
+//WITHOUT THE JOIN() METHOD
+//     var strArray = str.split("");
+//     var strArrayReversed = [];
+//     var i;
+//     var len = strArray.length; 
+//     for(i = 0; i <= len; i++) {
+//         strArrayReversed[i] = strArray[(len-1) - i];
+//     }
+//     var stringed = stringfy(strArrayReversed);
+
+//HELPER FUNCTION 
+// function stringfy(arrayedString) {
+//     var word = "";
+//     for(var j = 0; j < arrayedString.length - 1; j++) {
+//         word += arrayedString[j];
+//     }
+//     return word;
+// }
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
@@ -32,6 +52,60 @@ function isPalindrome(str) {
   //     return isPali
 }
 
+//CONTRIBUTED SOLUTION BY BLESSING TAYEDZERWA [everbliss7@gmail.com]
+function isPalindrom2(word) {
+//     var revd = "";
+//     for(var i = 0; i < word.length; i++) {
+//         revd = word[i] + revd;
+//     }
+//     if(revd === word) {
+//         console.log(word+": is a Palindrom.");
+//     }
+//     else {
+//         console.log(word+": is not a Palindrom.");
+//     }
+}
+
+isPalindrom2("pop");
+
+////CONTRIBUTED SOLUTION BY BLESSING TAYEDZERWA [everbliss7@gmail.com] WITH HELPER FUNCTIONS
+function isPalindrom3(word) {
+//     if((word.length % 2) == 0) {
+//         evenPalindrom(word);
+//     }
+//     else if(word.length % 2 == 1) {
+//         oddPalindrom(word);
+//     }
+// }
+// //even palindrom word
+    function evenPalindrom(word) {
+//     var firstHalf = word.slice(0, (word.length/2));
+//     var lastHalf  = word.slice((word.length/2));
+//     var reversedLastHalf = lastHalf.split('').reverse().join('');
+//     if(firstHalf === reversedLastHalf) {
+//         console.log(word+": is a Palindrom.");
+//     }
+//     else {
+//         console.log(word+": is not a Palindrom.");
+//     }
+    }
+// //odd palindrom word
+    function oddPalindrom(word) {
+//     var len = word.length;
+//     var lenOver2 = len/2;
+//     var firstHalf2 = word.slice(0, lenOver2 - 0.5);
+//     var lastHalf2  = word.slice(lenOver2 + 0.5);
+//     var lastHalf2Reversed = lastHalf2.split('').reverse().join('');
+//     if(lastHalf2Reversed === firstHalf2) {
+//         console.log(word+": is a Palindrom.");
+//     }
+//     else {
+//         console.log(word+": is not a Palindrom.");
+       }
+}
+
+isPalindrom3('nooooooon');
+
 // CHALLENGE 3: REVERSE AN INTEGER
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
@@ -41,7 +115,34 @@ function reverseInt(int) {}
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-function capitalizeLetters(str) {}
+function capitalizeLetters(str) {
+ // CONTRIBUTED SOLUTION BY BLESSING TAYEDZERWA [everbliss7@gmail.com] everbliss7@gmail.com
+ //Capitalize every first letter of every word in a sentence
+//     var strArrayed = str.toLowerCase().split(' ');
+//     var strArrayedNew = "";
+//     for(var i = 0; i < strArrayed.length; i++) {
+        
+//         for(var j = 0; j < strArrayed[i].length; j++) {
+//             if(strArrayed[i].length == 1) {
+//                 strArrayedNew += strArrayed[i][j].toUpperCase();
+//                 strArrayedNew += " ";
+//                 continue;
+//             }
+//             if(j == 0) {
+//                 strArrayedNew += strArrayed[i][j].toUpperCase();
+//                 continue;
+//             }
+//             if(j == strArrayed[i].length -1) {
+//                 strArrayedNew += strArrayed[i][j];
+//                 strArrayedNew += " ";
+//                 continue;
+//             }
+//             strArrayedNew += strArrayed[i][j];
+//         }
+//     }
+//     console.log(strArrayedNew);
+}
+capitalizeLetters("i love javascript and node js");
 
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
@@ -133,6 +234,8 @@ function fizzBuzz() {
   //     (i % 5 === 0 ? 'Buzz' : ''),
   //   ].join('') || i);
   // }
+
+
 }
 
 // Call Function
