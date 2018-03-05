@@ -34,25 +34,41 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-    // SOLUTION BY @mattmccherry
-    //    let i=0, output = [], currArr = [];
-    //
-    //    arr.forEach(element => {
-    //        currArr.push(element);
-    //        i++;
-    //        if (i%len === 0 || i === arr.length) {
-    //            output.push(currArr);
-    //            currArr = [];
-    //            }
-    //        });
-    //    return output;   
+  // SOLUTION BY @mattmccherry
+  //    let i=0, output = [], currArr = [];
+  //
+  //    arr.forEach(element => {
+  //        currArr.push(element);
+  //        i++;
+  //        if (i%len === 0 || i === arr.length) {
+  //            output.push(currArr);
+  //            currArr = [];
+  //            }
+  //        });
+  //    return output;   
 }
 
 function flattenArray(arrays) {
-    // SOLUTION BY @mattmccherry
-    // 
-    // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
+  // SOLUTION BY @mattmccherry
+  // 
+  // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
 }
+
+//SOLUTION BY djnakudo
+//its actually an "upgrade" to accept array of arrays and normal arrays and single elements, many elements that one can pass in as variables to the function, and it will be generated a new flat Array
+// let flattenArray = (...elements) => {
+//   let flatarray = [];
+//   let flatel = [];
+//   for (let element of elements) {
+
+//       if (element != null && typeof element[Symbol.iterator] === 'function') {
+//           flatel = flattArray(...element);
+//           flatarray = [...flatarray, ...flatel];
+//       } else
+//           flatarray = [...flatarray, element];
+//   };
+//   return flatarray;
+// }
 
 // CHALLENGE 3: FLATTEN ARRAY
 // Take an array of arrays and flatten to a single array
