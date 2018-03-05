@@ -12,6 +12,9 @@ function reverseString(str) {
   // CONTRIBUTED SOLUTION
   // BY Ankita Patil
   // return str.split("").reduce((reversedString, character) => character + reversedString, "");
+  // CONTRIBUTED SOLUTION
+  // BY Ole Martin Ruud
+  // return str.split('').reverse().join('')
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
@@ -30,18 +33,43 @@ function isPalindrome(str) {
   //         }
   //     }
   //     return isPali
+  // CONTRIBUTED SOLUTION
+  // BY Ole Martin Ruud
+  // const firstHalf = str.split('').slice(0, Math.floor(str.length/2))
+  // const secondHalf = str.split('').slice(Math.ceil(str.length/2))
+  // return firstHalf.join('') === secondHalf.reverse().join('')
 }
 
 // CHALLENGE 3: REVERSE AN INTEGER
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
 
-function reverseInt(int) {}
+function reverseInt(int) {
+  // CONTRIBUTED SOLUTION
+  // BY Ole Martin Ruud
+  // A pure numeric solution which doesn't convert to string and back.
+  // let i = 1;
+  // let digits = []
+  // while (int / Math.pow(10, i - 1) > 1) {
+  //   const digit = Math.floor((int % Math.pow(10, i)) / Math.pow(10, i - 1))
+  //   digits.push(digit)
+  //   i++
+  // }
+  // return digits
+  //   .reduce(
+  //     (reversedInt, digit, digitPos) =>
+  //       reversedInt + digit * Math.pow(10, digits.length - digitPos - 1),
+  //   0)
+}
 
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-function capitalizeLetters(str) {}
+function capitalizeLetters(str) {
+  // CONTRIBUTED SOLUTION
+  // BY Ole Martin Ruud
+  // return str.replace(/(\b\w)/g, char => char.toUpperCase())
+}
 
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
@@ -79,6 +107,18 @@ function maxCharacter(str) {
   //   .sort((a, b) => a[1] - b[1])
   //   .map(a => a[0]);
   // return sortedLetters[sortedLetters.length - 1];
+  // CONTRIBUTED SOLUTION
+  // BY Ole Martin Ruud
+  // const cache =
+  //   str
+  //     .toLowerCase()
+  //     .split('')
+  //     .reduce((cache, char) => {
+  //       cache[char] = (cache[char] + 1) || 1
+  //       return cache
+  //     }, {})
+  // return Object.entries(cache)
+  //   .reduce((biggest, current) => current[1] > biggest[1] ? current : biggest)[0]
 }
 
 // CHALLENGE 6: FIZZBUZZ
@@ -133,9 +173,15 @@ function fizzBuzz() {
   //     (i % 5 === 0 ? 'Buzz' : ''),
   //   ].join('') || i);
   // }
+  // CONTRIBUTED SOLUTION
+  // BY Ole Martin Ruud
+  // Array(100).fill(0).map((_, i) =>
+  //   `${(i % 3 === 2 ? 'Fizz' : '')}${(i % 5 === 4 ? 'Buzz' : '')}` || i+1
+  // ).forEach(s => console.log(s))
 }
 
 // Call Function
 const output = reverseString('hello');
 
 console.log(output);
+

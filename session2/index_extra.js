@@ -26,6 +26,13 @@ function longestWord(sen) {
   //     }
   //   });
   // return outputArr.length > 1 ? outputArr : outputArr[0];
+  // SOLUTION BY @barskern
+  // const result = sen
+  //   .match(/\w+/g)
+  //   .map(word => [ word.length, word ])
+  //   .reduce((longest, curr) => curr[0] === longest[0] ? [ ...longest, curr[1] ] : curr[0] < longest[0] ? longest : curr)
+  //   .slice(1)
+  // return result.length > 1 ? result : result[0]
 }
 
 // CHALLENGE 2: ARRAY CHUNKING
@@ -34,44 +41,54 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-    // SOLUTION BY @mattmccherry
-    //    let i=0, output = [], currArr = [];
-    //
-    //    arr.forEach(element => {
-    //        currArr.push(element);
-    //        i++;
-    //        if (i%len === 0 || i === arr.length) {
-    //            output.push(currArr);
-    //            currArr = [];
-    //            }
-    //        });
-    //    return output;   
+  // SOLUTION BY @mattmccherry
+  //    let i=0, output = [], currArr = [];
+  //
+  //    arr.forEach(element => {
+  //        currArr.push(element);
+  //        i++;
+  //        if (i%len === 0 || i === arr.length) {
+  //            output.push(currArr);
+  //            currArr = [];
+  //            }
+  //        });
+  //    return output;   
 
-    // SOLUTION ADDED BY @mattmccherry from https://30secondsofcode.org/#chunk
-    //
-    // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
-    // arr.slice(i * len, i * len + len)
-    // );
-}
-
-function flattenArray(arrays) {
-    // SOLUTION BY @mattmccherry
-    // 
-    // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
+  // SOLUTION ADDED BY @mattmccherry from https://30secondsofcode.org/#chunk
+  //
+  // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
+  // arr.slice(i * len, i * len + len)
+  // );
+  // SOLUTION BY @barskern
+  // return arr.reduce(
+  //   (result, _, index, values) => 
+  //     index % len === 0 ? [ ...result, values.slice(index, index + len) ] : result, 
+  //   [])
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
 // Take an array of arrays and flatten to a single array
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 
-function flattenArray(arrays) {}
+function flattenArray(arrays) {
+  // SOLUTION BY @mattmccherry
+  // 
+  // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
+  // SOLUTION BY @barskern
+  // Works with deeply nested arrays, hence flattens [[[3, 5, [4, [6, 7]]], 2]
+  // return arrays.reduce((flattend, item) => Array.isArray(item) ? [ ...flattend, ...flattenArray(item) ] : [ ...flattend, item ], [])
+}
 
 // CHALLENGE 4: ANAGRAM
 // Return true if anagram and false if not
 // ex. 'elbow' === 'below'
 // ex. 'Dormitory' === 'dirty room##'
 
-function isAnagram(str1, str2) {}
+function isAnagram(str1, str2) {
+  // SOLUTION BY @barskern
+  // const sortchars = str => str.replace(/[\W]/, '').split('').sort().join('')
+  // return sortchars(str1) === sortchars(str2)
+}
 
 // CHALLENGE 5: LETTER CHANGES
 // Change every letter of the string to the one that follows it and capitalize the vowels
@@ -84,6 +101,16 @@ function letterChanges(str) {
   // return str.toLowerCase().replace(/[a-z]/g, char => (
   //   char == 'z' ? 'A' : String.fromCharCode(char.charCodeAt() + 1)
   // )).replace(/[aeiou]/g, vowel => vowel.toUpperCase());
+  // SOLUTION BY @barskern
+  // Uses modulo 26 to enable wrapping of z to a
+  // return str.toLowerCase().split(' ')
+  //   .map(word => 
+  //     word.split('')
+  //       .map(char => 97 + ((1 + char.charCodeAt(0) - 97) % 26)) // ASCII: a = 97, z = 122
+  //       .map(ascii => String.fromCharCode(ascii))
+  //       .join('')
+  //       .replace(/[aeiou]/g, vowel => vowel.toUpperCase())
+  //   ).join(' ')
 }
 
 // Call Function
