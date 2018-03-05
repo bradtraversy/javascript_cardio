@@ -46,6 +46,12 @@ function chunkArray(arr, len) {
     //            }
     //        });
     //    return output;   
+
+    // SOLUTION ADDED BY @mattmccherry from https://30secondsofcode.org/#chunk
+    //
+    // return Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
+    // arr.slice(i * size, i * size + size)
+    // );
 }
 
 function flattenArray(arrays) {
