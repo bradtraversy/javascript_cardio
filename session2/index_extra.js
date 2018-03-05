@@ -49,8 +49,8 @@ function chunkArray(arr, len) {
 
     // SOLUTION ADDED BY @mattmccherry from https://30secondsofcode.org/#chunk
     //
-    // return Array.from({ length: Math.ceil(arr.length / size) }, (v, i) =>
-    // arr.slice(i * size, i * size + size)
+    // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
+    // arr.slice(i * len, i * len + len)
     // );
 }
 
