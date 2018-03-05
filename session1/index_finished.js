@@ -97,6 +97,11 @@ function isPalindrome(str) {
 
 }
 
+//  shortest one
+//  function isPal(s) {
+//    return s.split('').reverse().join('') === s;
+//  }
+
 
 
 // CHALLENGE 3: REVERSE AN INTEGER
