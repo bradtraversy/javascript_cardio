@@ -79,6 +79,16 @@ function maxCharacter(str) {
   //   .sort((a, b) => a[1] - b[1])
   //   .map(a => a[0]);
   // return sortedLetters[sortedLetters.length - 1];
+  // CONTRIBUTED SOLUTION
+  // BY Mackenzie Miller
+  // const obj = str
+  //   .toLowerCase()
+  //   .split("")
+  //   .reduce((acc, cv) => {
+  //     cv in acc ? acc[cv]++ : (acc[cv] = 1);
+  //     return acc;
+  //   }, {});
+  // return Object.keys(obj).reduce((acc, cv) => (obj[acc] > obj[cv] ? acc : cv));
 }
 
 // CHALLENGE 6: FIZZBUZZ
