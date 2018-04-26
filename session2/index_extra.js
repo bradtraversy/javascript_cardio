@@ -26,6 +26,17 @@ function longestWord(sen) {
   //     }
   //   });
   // return outputArr.length > 1 ? outputArr : outputArr[0];
+  
+  // SOLUTION BY @mackmmiller
+  // const arr = sen
+  //   .split(/\W/g)
+  //   .sort((a, b) => (a.length > b.length) ? -1 : 1);
+  // const reduced = arr
+  //   .reduce((acc, cv, cI, arr) => {
+  //     if (cv.length === arr[0].length) acc.push(cv);
+  //     return acc;
+  //   }, []);
+  // return (reduced.length > 1) ? reduced : reduced[0];
 }
 
 // CHALLENGE 2: ARRAY CHUNKING
@@ -52,6 +63,18 @@ function chunkArray(arr, len) {
     // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
     // arr.slice(i * len, i * len + len)
     // );
+  
+    // SOLUTION BY @mackmmiller
+    // const result = [];
+    // let chunk = [];
+    // arr.forEach((val, i) => {
+    //   chunk.push(val);
+    //   if ((i + 1) % len === 0 || i === arr.length - 1) {
+    //     result.push(chunk);
+    //     chunk = [];
+    //   }
+    // });
+    // return result;
 }
 
 function flattenArray(arrays) {
@@ -71,7 +94,13 @@ function flattenArray(arrays) {}
 // ex. 'elbow' === 'below'
 // ex. 'Dormitory' === 'dirty room##'
 
-function isAnagram(str1, str2) {}
+function isAnagram(str1, str2) {
+  // SOLUTION BY @mackmmiller
+  // function isAnagram(str1, str2) {
+  //   const format = str => [...str.toLowerCase()].sort().join();
+  //   return format(str1) === format(str2);
+  // }
+}
 
 // CHALLENGE 5: LETTER CHANGES
 // Change every letter of the string to the one that follows it and capitalize the vowels
