@@ -133,6 +133,13 @@ function fizzBuzz() {
   //     (i % 5 === 0 ? 'Buzz' : ''),
   //   ].join('') || i);
   // }
+  
+  // CONTRIBUTED SOLUTION
+  // By Ashish S
+  // for (let i = 1; i < 101; i++) {
+  //   let a = i % 3 ? (i % 5 ? i : 'Buzz') : i % 5 ? 'Fizz' : 'FizzBuzz';
+  //   console.log(a);
+  // }
 }
 
 // Call Function
