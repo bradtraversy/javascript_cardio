@@ -66,6 +66,12 @@ function flattenArray(arrays) {
 
 function flattenArray(arrays) {}
 
+// Solution by patryklkakol:
+// return arrays
+//     .join()
+//     .split(',')
+//     .map(a => +a || a);
+
 // CHALLENGE 4: ANAGRAM
 // Return true if anagram and false if not
 // ex. 'elbow' === 'below'
