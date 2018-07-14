@@ -54,23 +54,21 @@ function chunkArray(arr, len) {
     // );
 }
 
-function flattenArray(arrays) {
-    // SOLUTION BY @mattmccherry
-    // 
-    // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
-}
-
 // CHALLENGE 3: FLATTEN ARRAY
 // Take an array of arrays and flatten to a single array
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 
-function flattenArray(arrays) {}
+function flattenArray(arrays) {
+    // SOLUTION BY @mattmccherry
+    // 
+    // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
 
-// Solution by patryklkakol:
-// return arrays
-//     .join()
-//     .split(',')
-//     .map(a => +a || a);
+    // SOLUTION BY patryklkakol:
+    // return arrays
+    //     .join()
+    //     .split(',')
+    //     .map(a => +a || a);
+}
 
 // CHALLENGE 4: ANAGRAM
 // Return true if anagram and false if not
