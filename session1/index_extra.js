@@ -79,6 +79,12 @@ function maxCharacter(str) {
   //   .sort((a, b) => a[1] - b[1])
   //   .map(a => a[0]);
   // return sortedLetters[sortedLetters.length - 1];
+  // BY Bedirhan Dincer
+  // const charMap = {};
+  // str
+  //   .split('')
+  //   .forEach(char => (charMap[char] = charMap[char] ? charMap[char] + 1 : 1));
+  // return Math.max(...Object.keys(charMap).map(char => charMap[char]));
 }
 
 // CHALLENGE 6: FIZZBUZZ
