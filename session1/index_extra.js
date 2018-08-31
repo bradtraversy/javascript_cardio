@@ -12,6 +12,13 @@ function reverseString(str) {
   // CONTRIBUTED SOLUTION
   // BY Ankita Patil
   // return str.split("").reduce((reversedString, character) => character + reversedString, "");
+  // CONTRIBUTED SOLUTION
+  // BY James Robinson
+  // if (str.length === 1) {
+  //   return str[0];
+  // } else {
+  //   return reverseString(str.slice(1)) + str[0];
+  // }
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
