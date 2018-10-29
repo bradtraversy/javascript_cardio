@@ -36,7 +36,37 @@ function sortByHeight() {}
 // missingLetters("abcdefghjklmno") == "i"
 // missingLetters("abcdefghijklmnopqrstuvwxyz") == undefined
 
-function missingLetters() {}
+function missingLetters(str) {
+  const start = 'a'.charCodeAt()
+  const end = 'z'.charCodeAt()
+
+  // Generate the Valid Letters according to the test
+  let validLetters = [];
+  for (i = start; i <= end; i++) {
+    validLetters.push(String.fromCharCode(i))
+  }
+
+  // arrayfy the given parameter letters
+  const letters = str.split('');
+  // initialize an empty array of the missing letters
+  let missing = [];
+
+  // traverse through the validLetters
+  validLetters.forEach(letter => {
+    // if a valid letter is not in the item,
+    // push it to the `missing` variable
+    if (!letters.includes(letter)) {
+      missing.push(letter);
+    }
+  });
+
+  // Checks if missing filled, else return undefined
+  return missing.length ? missing : undefined;
+}
+
+const letters = 'abcdefghijkmnoprstuvwxyz'
+console.log('Missing: ' + missingLetters(letters)) // `Missing: l, q`;
+
 
 // CHALLENGE 6: EVEN & ODD SUMS
 // Take in an array and return an array of the sums of even and odd numbers
