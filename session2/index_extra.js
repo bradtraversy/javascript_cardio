@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ////// INSTRUCTIONS /////
 // ADD YOUR SOLUTIONS HERE
 // COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
@@ -40,10 +39,9 @@ function isAnagram(str1, str2) {}
 function letterChanges(str) {}
 
 // Call Function
-const output = longestWord('Hello there, my name is Brad');
+const output = longestWord("Hello there, my name is Brad");
 
 console.log(output);
-=======
 ////// INSTRUCTIONS /////
 // ADD YOUR SOLUTIONS HERE
 // COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
@@ -80,24 +78,23 @@ function longestWord(sen) {
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-    // SOLUTION BY @mattmccherry
-    //    let i=0, output = [], currArr = [];
-    //
-    //    arr.forEach(element => {
-    //        currArr.push(element);
-    //        i++;
-    //        if (i%len === 0 || i === arr.length) {
-    //            output.push(currArr);
-    //            currArr = [];
-    //            }
-    //        });
-    //    return output;   
-
-    // SOLUTION ADDED BY @mattmccherry from https://30secondsofcode.org/#chunk
-    //
-    // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
-    // arr.slice(i * len, i * len + len)
-    // );
+  // SOLUTION BY @mattmccherry
+  //    let i=0, output = [], currArr = [];
+  //
+  //    arr.forEach(element => {
+  //        currArr.push(element);
+  //        i++;
+  //        if (i%len === 0 || i === arr.length) {
+  //            output.push(currArr);
+  //            currArr = [];
+  //            }
+  //        });
+  //    return output;
+  // SOLUTION ADDED BY @mattmccherry from https://30secondsofcode.org/#chunk
+  //
+  // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
+  // arr.slice(i * len, i * len + len)
+  // );
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
@@ -105,15 +102,18 @@ function chunkArray(arr, len) {
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 
 function flattenArray(arrays) {
-    // SOLUTION BY @mattmccherry
-    // 
-    // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
-
-    // SOLUTION BY patryklkakol:
-    // return arrays
-    //     .join()
-    //     .split(',')
-    //     .map(a => +a || a);
+  // SOLUTION BY colebearski
+  //
+  // return arrays.flat();
+  //
+  // SOLUTION BY @mattmccherry
+  //
+  // return arrays.reduce((arr, nums) => [...arr, ...nums], []);
+  // SOLUTION BY patryklkakol:
+  // return arrays
+  //     .join()
+  //     .split(',')
+  //     .map(a => +a || a);
 }
 
 // CHALLENGE 4: ANAGRAM
@@ -137,7 +137,6 @@ function letterChanges(str) {
 }
 
 // Call Function
-const output = longestWord('Hello there, my name is Brad');
+const output = longestWord("Hello there, my name is Brad");
 
 console.log(output);
->>>>>>> e8090fea1d9fe2c208a8f8ce4cc46be9f287b108
