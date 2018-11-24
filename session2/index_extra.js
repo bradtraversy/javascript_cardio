@@ -95,6 +95,15 @@ function chunkArray(arr, len) {
   // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
   // arr.slice(i * len, i * len + len)
   // );
+
+  // SOLUTION BY @jerryakpera
+  // const chunks = []
+
+  // while (arr.length >= len) {
+  //   chunks.push(arr.splice(0, len))
+  // }
+  // chunks.push(arr.splice(0))
+  // return chunks
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
