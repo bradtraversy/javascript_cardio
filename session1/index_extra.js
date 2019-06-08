@@ -49,18 +49,18 @@ function isPalindrome(str) {
 // ex. reverseInt(521) === 125
 
 function reverseInt(int) {
-    // CONTRIBUTED SOLUTION
-    // BY Abdulahi Roble
-    // Github: abdu020
-    // function reverseInt(int) {
-    // const revNumber = int
-    //    .split("")
-    //    .reverse()
-    //    .map(function(t) {
-    //      return parseInt(t);
-    //    });
-    //  return revNumber;
-    // }
+   // CONTRIBUTED SOLUTION
+   // BY Abdulahi Roble
+   // Github: abdu020
+   // function reverseInt(int) {
+   // const revNumber = int
+   //    .split("")
+   //    .reverse()
+   //    .map(function(t) {
+   //      return parseInt(t);
+   //    });
+   //  return revNumber;
+   // }
   
 }
 
