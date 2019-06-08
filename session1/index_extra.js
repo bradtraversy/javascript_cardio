@@ -48,7 +48,21 @@ function isPalindrome(str) {
 // Return an integer in reverse
 // ex. reverseInt(521) === 125
 
-function reverseInt(int) {}
+function reverseInt(int) {
+   // CONTRIBUTED SOLUTION
+   // BY Abdulahi Roble
+   // Github: abdu020
+   // function reverseInt(int) {
+   // const revNumber = int
+   //    .split("")
+   //    .reverse()
+   //    .map(function(t) {
+   //      return parseInt(t);
+   //    });
+   //  return revNumber;
+   // }
+  
+}
 
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
