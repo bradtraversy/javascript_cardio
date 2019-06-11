@@ -67,7 +67,23 @@ function reverseInt(int) {
 // CHALLENGE 4: CAPITALIZE LETTERS
 // Return a string with the first letter of every word capitalized
 // ex. capitalizeLetters('i love javascript') === 'I Love Javascript'
-function capitalizeLetters(str) {}
+function capitalizeLetters(str) {
+    // CONTRIBUTED SOLUTION
+    // By Flinchy
+
+    // let splitStr = str.split(' ');
+    // let newStr = [];
+    // let firstLetter, capitalizeFirstLetter, word, capitalizeWord;
+
+    // for(let i = 0; i < splitStr.length; i++) {      
+    //     word = splitStr[i];
+    //     firstLetter = word[0];
+    //     capitalizeFirstLetter = firstLetter.toUpperCase();
+    //     capitalizeWord = word.replace(firstLetter, capitalizeFirstLetter);
+    //     newStr.push(capitalizeWord);
+    // }
+    // return newStr.join(' ');
+}
 
 // CHALLENGE 5: MAX CHARACTER
 // Return the character that is most common in a string
