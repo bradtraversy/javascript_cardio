@@ -79,7 +79,9 @@ function flattenArray(arrays) {
   // SOLUTION 2
   // return [].concat.apply([], arrays);
   // SOLUTION 3
-  return [].concat(...arrays);
+  // return [].concat(...arrays);
+  // SOLUTION 4
+  return arrays.flat(Infinity);
 }
 
 // CHALLENGE 4: ANAGRAM
