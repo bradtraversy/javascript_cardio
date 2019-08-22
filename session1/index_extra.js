@@ -24,6 +24,17 @@ function reverseString(str) {
   // .... BY Yusuf Delvi
   // https://github.com/yusuf-delvi
   // ==================
+
+  // =================
+  // CONTRIBUTED SOLUTION
+  // let arr = [...str];
+  //
+  // return arr.reduce((accumulator, currentValue, currentIndex, array) => {
+  //     return accumulator + array[array.length - currentIndex - 1];
+  // }, "");
+  // .... BY Jawad Mohammad
+  // https://github.com/jawadiut
+  // ==================
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
@@ -42,6 +53,17 @@ function isPalindrome(str) {
   //         }
   //     }
   //     return isPali
+
+  // CONTRIBUTED SOLUTION
+  // for (i=0; i<str.length/2; i++) {
+  //     if (str[i]!== str[str.length-i-1]) {
+  //         return false;
+  //     }
+  // }
+  //
+  // return true;
+  // .... BY Jawad Mohammad
+  // https://github.com/jawadiut
 }
 
 // CHALLENGE 3: REVERSE AN INTEGER
