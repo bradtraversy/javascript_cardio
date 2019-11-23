@@ -103,6 +103,12 @@ function formatStr(str) {
     .join('');
 }
 
+function isAnagramx (str1,str2){
+    const arr1 = str1.split('').sort()
+    const arr2 = str2.split('').sort()
+    return arr1.every((value,index) => value === arr2[index])
+}
+
 // CHALLENGE 5: LETTER CHANGES
 // Change every letter of the string to the one that follows it and capitalize the vowels
 // Z should turn to A
