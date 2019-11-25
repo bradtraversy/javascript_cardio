@@ -9,11 +9,36 @@
 
 function addAll() {}
 
+// __________________@missx________________
+
+const addAll = (...args) => args.reduce((a,b)=> a+b)
+console.log( addAll(2,5,6,7))
+
+
 // CHALLENGE 2: SUM ALL PRIMES
 // Pass in a number to loop up to and add all of the prime numbers. A prime number is a whole number greater than 1 whose only factors are 1 and itself
 // ex. sumAllPrimes(10) == 17
 
 function sumAllPrimes() {}
+
+// __________________@missx________________
+const isPrime = num => {
+    for(let i = 2; i < num; i++)
+      if(num % i === 0) return false;
+    return num > 1;
+  }
+
+function sumAllPrimes(num) {
+    var sumNum = 0
+    for(let i = 2 ; i < num ; i++){
+       if(isPrime(i)){
+           sumNum += i 
+       }
+
+    }
+    return sumNum
+}
+console.log(sumAllPrimes(10))
 
 // CHALLENGE 3: SEEK & DESTROY
 // Remove from the array whatever is in the following arguments. Return the leftover numbers in an array
@@ -73,6 +98,21 @@ function missingLetters(str) {
 const letters = 'abcdefghijkmnoprstuvwxyz'
 console.log('Missing: ' + missingLetters(letters)) // `Missing: l, q`;
 
+//________________________@missx______________________
+function missingLetters(str) {
+    arr = str.split('')
+    for(let i = 0 ; i < arr.length ; i++){
+        let letter = arr[i]
+        let nextLetter = String.fromCharCode(letter.charCodeAt()+1)
+        if(letter == 'z'){
+            return undefined
+        } else if(nextLetter !== arr[i + 1]){
+            return nextLetter
+    }
+}
+}
+console.log(missingLetters("abcdefghijklmnopqrstuvwxyz"))
+
 
 // CHALLENGE 6: EVEN & ODD SUMS
 // Take in an array and return an array of the sums of even and odd numbers
@@ -80,3 +120,15 @@ console.log('Missing: ' + missingLetters(letters)) // `Missing: l, q`;
 // evenOddSums([50, 60, 60, 45, 71]) == [170, 116]
 
 function evenOddSums() {}
+
+//_____________________ @missx________________
+function evenOddSums(arr) {
+    let sumEven = 0 ; 
+    let SumOdd = 0 ; 
+    for(i of arr){
+        i % 2 == 0 ? SumOdd +=i : sumEven +=i
+    }
+    return [SumOdd , sumEven]
+}
+console.log(evenOddSums([50, 60, 60, 45, 71]))
+
