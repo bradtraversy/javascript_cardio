@@ -84,6 +84,19 @@ function flattenArray(arrays) {
   return arrays.flat(Infinity);
 }
 
+//____________________________@missx7________________________
+
+function  flatenArray(arr){
+    newArr = []
+    for( let i = 0 ; i < arr.length ; i++){
+        for(let j = 0 ; j < arr[i].length ; j++){
+            newArr.push(arr[i][j])
+        }
+    }
+    return newArr
+}
+//____________#______________@missx7____________#___________
+
 // CHALLENGE 4: ANAGRAM
 // Return true if anagram and false if not
 // ex. 'elbow' === 'below'
@@ -102,6 +115,18 @@ function formatStr(str) {
     .sort()
     .join('');
 }
+
+//___________________________@missx7________________________
+
+function isAnagramx (str1,str2){
+    const arr1 = str1.split('').sort()
+    const arr2 = str2.split('').sort()
+    return arr1.every((value,index) => value === arr2[index])
+}
+
+const isAnagramx = (str1,str2) => str1.split('').sort().every((value,index) => value ===  str2.split('').sort()[index])
+
+//____________#______________@missx7____________#___________
 
 // CHALLENGE 5: LETTER CHANGES
 // Change every letter of the string to the one that follows it and capitalize the vowels
