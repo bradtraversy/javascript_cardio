@@ -24,6 +24,14 @@ function chunkArray(arr, len) {
     //     }
     //     return acc;
     // }, []);
+    
+    // ----- SOLUTION BY Jon Bodnar ----- //
+    // const chunked = [];
+    // while (arr.length) {
+    //     chunked.push(arr.splice(0, len));
+    // }
+    // return chunked;
+    // ----- END ----- // 
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
