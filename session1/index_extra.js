@@ -35,6 +35,13 @@ function reverseString(str) {
   // .... BY Jawad Mohammad
   // https://github.com/jawadiut
   // ==================
+  
+  // =================
+  // CONTRIBUTED SOLUTION
+  // by Gamze Erol
+  // return [...str].reverse().join('');  
+  // =================
+  
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
@@ -64,6 +71,13 @@ function isPalindrome(str) {
   // return true;
   // .... BY Jawad Mohammad
   // https://github.com/jawadiut
+  
+  // =================
+  // CONTRIBUTED SOLUTION
+  // by Gamze Erol
+  // return str == reverseString(str);
+  // =================
+  
 }
 
 // CHALLENGE 3: REVERSE AN INTEGER
@@ -83,6 +97,12 @@ function reverseInt(int) {
    //    });
    //  return revNumber;
    // }
+  
+   // =====================
+   // CONTRIBUTED SOLUTION
+   // by Gamze Erol
+   //return parseInt([...int.toString()].reverse().join(''));
+   // =====================
   
 }
 
@@ -105,6 +125,13 @@ function capitalizeLetters(str) {
     //     newStr.push(capitalizeWord);
     // }
     // return newStr.join(' ');
+    // ==========================
+    // CONTRIBUTED SOLUTION
+    // by Gamze Erol
+    //return str.split(' ').map(s => 
+    //    s[0].toUpperCase() + s.substring(1)).join(' ');
+    //===============================
+    
 }
 
 // CHALLENGE 5: MAX CHARACTER
@@ -340,6 +367,16 @@ function fizzBuzz() {
   //   let a = i % 3 ? (i % 5 ? i : 'Buzz') : i % 5 ? 'Fizz' : 'FizzBuzz';
   //   console.log(a);
   // }
+  
+  // CONTRIBUTED SOLUTION
+  // By Gamze Erol
+    //  for(i = 1; i<=100; i++) {
+    //     if (i % 3 === 0 && i % 5 === 0) console.log('FizzBuzz');        
+    //     else if (i % 3 === 0) console.log('Fizz');
+    //     else if (i % 5 === 0) console.log('Buzz');        
+    //     else console.log(i);         
+    // }
+  
 }
 
 // Call Function
