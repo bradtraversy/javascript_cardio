@@ -161,6 +161,33 @@ function maxCharacter(str) {
   // return maxChar.char;
 }
 
+//Solution by Naomi Sharp
+//Fixes bug in above solution for which the string "socks" would not work. This is because
+//the char "s" is the last one in the array sortedStr so the code to store maxChar does not run.
+
+function maxCharacter(str) {
+  // const sortedStr = str.split('').sort();
+  // const maxChar = {char: '', count: 0};
+  // const currentChar = {char: '', count: 0};
+  
+  // sortedStr.forEach(char => {
+  //   if(currentChar.char === char){
+  //     currentChar.count++;
+  //     if(maxChar.count < currentChar.count){
+  //       maxChar.char = currentChar.char;
+  //       maxChar.count = currentChar.count;
+  //     }
+  //     currentChar.char = char;
+  //     currentChar.count = 0;
+  //   } else {
+  //     currentChar.char = char;
+  //     currentChar.count = 1;
+  //   }
+  // });
+  
+  // return maxChar.char;
+  }
+
 // CHALLENGE 6: FIZZBUZZ
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
 function fizzBuzz() {
@@ -289,6 +316,8 @@ function maxCharacter(str) {
   //   }
   // });
   // return maxChar.char;
+
+
   // CONTRIBUTED SOLUTION
   // BY Romain Guilloteau
   // let letters = {};
