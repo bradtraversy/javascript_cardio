@@ -236,28 +236,28 @@ function fizzBuzz() {
   /* FIZZBUZZ -  CONTRIBUTED SOLUTION BY @sheygs_ 👇*/
 
  // generates a range of number between 1 and max
- const generateMaxSequence = max => {
-  return Array(max)
-         .fill()
-         .map((_,i) => i + 1);
-}
+//  const generateMaxSequence = max => {
+//   return Array(max)
+//          .fill()
+//          .map((_,i) => i + 1);
+// }
 
-const fizzBuzz = num => {
-  return generateMaxSequence(num).map(num => {
-    switch(true){
-      case (num % 15 === 0):
-        return "FizzBuzz";
-      case (num % 3 === 0):
-        return "Fizz";
-      case (num % 5 === 0):
-        return "Buzz";
-      default:
-        return num;    
-    }
-  }). join(', ');
-}
+// const fizzBuzz = num => {
+//   return generateMaxSequence(num).map(num => {
+//     switch(true){
+//       case (num % 15 === 0):
+//         return "FizzBuzz";
+//       case (num % 3 === 0):
+//         return "Fizz";
+//       case (num % 5 === 0):
+//         return "Buzz";
+//       default:
+//         return num;    
+//     }
+//   }). join(', ');
+// }
 
-const fizzBuzzSequence = fizzBuzz(30);
+// const fizzBuzzSequence = fizzBuzz(30);
 
 /* FIZZBUZZ - CONTRIBUTED SOLUTION BY @sheygs_ 👆 */
 
