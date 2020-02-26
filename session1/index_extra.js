@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // CHALLENGE 1: REVERSE A STRING
 // Return a string in reverse
 // ex. reverseString('hello') === 'olleh'
@@ -232,13 +231,41 @@ function fizzBuzz() {
   //   }
   //   console.log(output);
   // }
+
 }
+  /* FIZZBUZZ -  CONTRIBUTED SOLUTION BY @sheygs_ 👇*/
+
+ // generates a range of number between 1 and max
+ const generateMaxSequence = max => {
+  return Array(max)
+         .fill()
+         .map((_,i) => i + 1);
+}
+
+const fizzBuzz = num => {
+  return generateMaxSequence(num).map(num => {
+    switch(true){
+      case (num % 15 === 0):
+        return "FizzBuzz";
+      case (num % 3 === 0):
+        return "Fizz";
+      case (num % 5 === 0):
+        return "Buzz";
+      default:
+        return num;    
+    }
+  }). join(', ');
+}
+
+const fizzBuzzSequence = fizzBuzz(30);
+
+/* FIZZBUZZ - CONTRIBUTED SOLUTION BY @sheygs_ 👆 */
 
 // Call Function
 const output = reverseString('hello');
 
 console.log(output);
-=======
+
 // CHALLENGE 1: REVERSE A STRING
 // Return a string in reverse
 // ex. reverseString('hello') === 'olleh'
@@ -412,4 +439,4 @@ function fizzBuzz() {
 const output = reverseString('hello');
 
 console.log(output);
->>>>>>> e8090fea1d9fe2c208a8f8ce4cc46be9f287b108
+
