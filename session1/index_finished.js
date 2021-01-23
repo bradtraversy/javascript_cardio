@@ -105,9 +105,17 @@ function isPalindrome(str) {
 // ex. reverseInt(521) === 125
 
 function reverseInt(int) {
-  const revString = int.toString().split('').reverse().join('');
+  //const revString = int.toString().split('').reverse().join('');
 
-  return parseInt(revString) * Math.sign(int);
+  //return parseInt(revString) * Math.sign(int);
+  let revInt = 0;
+  const isPositive = int > 0;
+  int = Math.abs(int);
+  while(int!=0){
+    revInt = revInt * 10 + int % 10;
+    int = Math.floor(int/10);
+  }
+  return revInt * (isPositive ? 1 : -1);
 }
 
 
