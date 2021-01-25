@@ -191,6 +191,29 @@ function maxCharacter(str) {
 // CHALLENGE 6: FIZZBUZZ
 // Write a program that prints all the numbers from 1 to 100. For multiples of 3, instead of the number, print "Fizz", for multiples of 5 print "Buzz". For numbers which are multiples of both 3 and 5, print "FizzBuzz".
 function fizzBuzz() {
+  //CONTRIBUTED SOLUTION
+  // By Devesh
+  // let c3 = 0;
+  // let c5 = 0;
+  //   for(let i = 1; i <= 100 ; i++){
+  //       c3++;
+  //       c5++;
+  //       let d = '';
+  //       if(c3 == 3){
+  //           d += 'Fizz';
+  //           c3 = 0;
+  //       }
+  //       if(c5 == 5){
+  //           d += 'Buzz';
+  //           c5 = 0;
+  //       }
+  //       if(d == ''){
+  //           console.log(i);
+  //       }else{
+  //           console.log(d);
+  //       }  
+  //   }
+  
   // CONTRIBUTED SOLUTION
   // for(let i = 1; i <= 100; i++) {
   //   let printNum=true;
