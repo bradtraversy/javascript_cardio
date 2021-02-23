@@ -60,6 +60,16 @@ function isPalindrome(str) {
   //         }
   //     }
   //     return isPali
+  
+
+  //  CONTRIBUTED SOLUTION
+  // By Mateus Kuritza
+  //  strReverse = str.split("").reverse().join("");
+  //  if(str === strReverse){
+  //      return true
+  //  }else{
+  //      return false
+  //  }
 
   // CONTRIBUTED SOLUTION
   // for (i=0; i<str.length/2; i++) {
