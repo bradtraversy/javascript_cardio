@@ -3,6 +3,54 @@
 // COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
 // ADD "SOLUTION BY [YOUR NAME]"
 
+////// INSTRUCTIONS /////
+// Almost similar but instead of sorting, I just get the max length from the
+//array filter the array according to max length
+// COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
+// "SOLUTION BY AYTAC GULEY"
+// CHALLENGE 1: LONGEST WORD
+const longestWord = (sentence) => {
+  const senArr = sentence.toLowerCase().match(/[a-z0-9]+/g);
+  const maxLen = Math.max(...senArr.map((word) => word.length));
+  const longestWordArr = senArr.filter((word) => word.length === maxLen);
+
+  return longestWordArr.length === 1 ? longestWordArr[0] : longestWordArr;
+};
+
+////// INSTRUCTIONS /////
+// I just get the chunk number by dividing array length to
+// the expected length and also findout the length of remainin
+// in forEach loop, I created conditions according to chunk number
+// and remaining number.
+// COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
+// "SOLUTION BY AYTAC GULEY"
+//  CHALLENGE 2: ARRAY CHUNKING
+const chunkArray = (arr, len) => {
+  const chunks = [];
+  let chunk = [];
+  const chunkNum = Math.floor(arr.length / len);
+  const remaining = arr.length % len;
+
+  arr.forEach((el) => {
+    chunk.push(el);
+
+    if (chunk.length === len) {
+      chunks.push(chunk);
+      chunk = [];
+    }
+
+    if (
+      chunks.length === chunkNum &&
+      chunk.length === remaining &&
+      remaining !== 0
+    ) {
+      chunks.push(chunk);
+    }
+  });
+
+  return chunks;
+};
+
 // CHALLENGE 1: LONGEST WORD
 // Return the longest word of a string
 // If more than one longest word, put into an array
@@ -17,21 +65,20 @@ function longestWord(sen) {}
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-    // SOLUTION BY Jawad Mohammad
-    // return arr.reduce((acc, cv, ci, array) => {
-    //     if (ci % len === 0 ) {
-    //         acc.push(array.slice(ci, ci+len));
-    //     }
-    //     return acc;
-    // }, []);
-    
-    // ----- SOLUTION BY Jon Bodnar ----- //
-    // const chunked = [];
-    // while (arr.length) {
-    //     chunked.push(arr.splice(0, len));
-    // }
-    // return chunked;
-    // ----- END ----- // 
+  // SOLUTION BY Jawad Mohammad
+  // return arr.reduce((acc, cv, ci, array) => {
+  //     if (ci % len === 0 ) {
+  //         acc.push(array.slice(ci, ci+len));
+  //     }
+  //     return acc;
+  // }, []);
+  // ----- SOLUTION BY Jon Bodnar ----- //
+  // const chunked = [];
+  // while (arr.length) {
+  //     chunked.push(arr.splice(0, len));
+  // }
+  // return chunked;
+  // ----- END ----- //
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
@@ -39,11 +86,11 @@ function chunkArray(arr, len) {
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 
 function flattenArray(arrays) {
-    // SOLUTION BY Jawad Mohammad
-    // return arrays.reduce((acc, cv) => {
-    //     acc.push(...cv);
-    //     return acc;
-    // }, []);
+  // SOLUTION BY Jawad Mohammad
+  // return arrays.reduce((acc, cv) => {
+  //     acc.push(...cv);
+  //     return acc;
+  // }, []);
 }
 
 // CHALLENGE 4: ANAGRAM
@@ -61,7 +108,7 @@ function isAnagram(str1, str2) {}
 function letterChanges(str) {}
 
 // Call Function
-const output = longestWord("Hello there, my name is Brad");
+const output = longestWord('Hello there, my name is Brad');
 
 console.log(output);
 ////// INSTRUCTIONS /////
@@ -117,10 +164,8 @@ function chunkArray(arr, len) {
   // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
   // arr.slice(i * len, i * len + len)
   // );
-
   // SOLUTION BY @jerryakpera
   // const chunks = []
-
   // while (arr.length >= len) {
   //   chunks.push(arr.splice(0, len))
   // }
@@ -168,6 +213,6 @@ function letterChanges(str) {
 }
 
 // Call Function
-const output = longestWord("Hello there, my name is Brad");
+const output = longestWord('Hello there, my name is Brad');
 
 console.log(output);
