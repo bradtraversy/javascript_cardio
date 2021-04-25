@@ -9,13 +9,13 @@
 // COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
 // "SOLUTION BY AYTAC GULEY"
 // CHALLENGE 1: LONGEST WORD
-const longestWord = (sentence) => {
-  const senArr = sentence.toLowerCase().match(/[a-z0-9]+/g);
-  const maxLen = Math.max(...senArr.map((word) => word.length));
-  const longestWordArr = senArr.filter((word) => word.length === maxLen);
+// const longestWord = (sentence) => {
+//   const senArr = sentence.toLowerCase().match(/[a-z0-9]+/g);
+//   const maxLen = Math.max(...senArr.map((word) => word.length));
+//   const longestWordArr = senArr.filter((word) => word.length === maxLen);
 
-  return longestWordArr.length === 1 ? longestWordArr[0] : longestWordArr;
-};
+//   return longestWordArr.length === 1 ? longestWordArr[0] : longestWordArr;
+// };
 
 ////// INSTRUCTIONS /////
 // I just get the chunk number by dividing array length to
@@ -25,31 +25,47 @@ const longestWord = (sentence) => {
 // COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
 // "SOLUTION BY AYTAC GULEY"
 //  CHALLENGE 2: ARRAY CHUNKING
-const chunkArray = (arr, len) => {
-  const chunks = [];
-  let chunk = [];
-  const chunkNum = Math.floor(arr.length / len);
-  const remaining = arr.length % len;
+// const chunkArray = (arr, len) => {
+//   const chunks = [];
+//   let chunk = [];
+//   const chunkNum = Math.floor(arr.length / len);
+//   const remaining = arr.length % len;
 
-  arr.forEach((el) => {
-    chunk.push(el);
+//   arr.forEach((el) => {
+//     chunk.push(el);
 
-    if (chunk.length === len) {
-      chunks.push(chunk);
-      chunk = [];
-    }
+//     if (chunk.length === len) {
+//       chunks.push(chunk);
+//       chunk = [];
+//     }
 
-    if (
-      chunks.length === chunkNum &&
-      chunk.length === remaining &&
-      remaining !== 0
-    ) {
-      chunks.push(chunk);
-    }
-  });
+//     if (
+//       chunks.length === chunkNum &&
+//       chunk.length === remaining &&
+//       remaining !== 0
+//     ) {
+//       chunks.push(chunk);
+//     }
+//   });
 
-  return chunks;
-};
+//   return chunks;
+// };
+
+////// INSTRUCTIONS /////
+// Almost similar to concat() method.
+// COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
+// "SOLUTION BY AYTAC GULEY"
+//  CHALLENGE 3: FLATTEN ARRAY
+
+// const flattenArray = (arrays) => {
+//   let flattenArr = [];
+
+//   arrays.forEach((arr) => {
+//     flattenArr = [...flattenArr, ...arr];
+//   });
+
+//   return flattenArr;
+// };
 
 // CHALLENGE 1: LONGEST WORD
 // Return the longest word of a string
