@@ -344,6 +344,12 @@ function reverseString(str) {
   return str.split("").reduce((reversedString, character) => character + reversedString, "");
 }
 
+// another solution (calling the function Array.prototype.reduceRight on a string)
+// contributed by Roman Karagodin
+function reverseString(str) {
+  return Array.prototype.reduceRight.call(str, (reversedStr, ch) => reversedStr + ch);
+}
+
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
