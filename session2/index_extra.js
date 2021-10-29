@@ -17,6 +17,16 @@ function longestWord(sen) {}
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
+    
+    //SOLUTION BY Ikram Ul Haq
+    //   const chunkedArr = [];
+    //   arr.forEach((val) => {
+    //     const last = chunkedArr.at(-1);
+    //     !last || last.length === len ? chunkedArr.push([val]) : last.push(val);
+    //   });
+    //   return chunkedArr;
+    // };
+    
     // SOLUTION BY Jawad Mohammad
     // return arr.reduce((acc, cv, ci, array) => {
     //     if (ci % len === 0 ) {
