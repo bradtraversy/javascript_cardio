@@ -113,6 +113,27 @@ function missingLetters(str) {
 }
 console.log(missingLetters("abcdefghijklmnopqrstuvwxyz"))
 
+// SOLUTION by VeNoM for missingLetters
+// this solution also returns consecutively missed letters
+const missingLettersByVeNoM = (str = '') => {
+    let charCode = str.charCodeAt(0)
+    let missing = []
+
+    str.split('').forEach((char) => {
+        const currCharCode = char.charCodeAt(0)
+        if (charCode !== currCharCode) {
+            while (charCode < currCharCode) {
+                missing.push(String.fromCharCode(charCode))
+                charCode++
+            }
+        }
+        charCode++
+    })
+
+    return missing.join('')
+}
+
+console.log(missingLettersByVeNoM('abcdeghjkn')) // here 'lm' are consecutively missed, so output: film
 
 // CHALLENGE 6: EVEN & ODD SUMS
 // Take in an array and return an array of the sums of even and odd numbers
