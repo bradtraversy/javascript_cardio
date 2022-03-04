@@ -3,7 +3,61 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
-  return 'Let\'s Start'
+  // one line solution
+  // return str.split("").reverse().join("");
+
+  // for loop solution
+  // let strRev = "";
+  // for (let i = str.length - 1; i >= 0; i--) { // decreasing string length
+  //   strRev = strRev + str[i];
+  // }
+
+  // return strRev;
+
+
+  // ES6
+  // let strRev = "";
+  // for (let i = 1; i <= str.length; i++) {
+  //   strRev = strRev + str[i];
+  // }
+
+  // return strRev;
+
+
+  // For of Loop
+  // let strRev = "";
+  // for (let char of str) {
+  //   strRev = strRev + str[char];
+  // }
+
+  // return strRev;
+
+
+  // ForEach
+  // let strRev = "";
+  // str.split("").forEach(function(char) {
+  //   strRev = char + strRev;
+  // });
+
+  // return strRev
+
+
+  // ForEach Arrow Function
+  // let strRev = "";
+  // str.split("").forEach(char => {
+  //   strRev = char + strRev});
+
+  // return strRev; 
+
+
+  // Reduce
+  // return str.split("").reduce(function(strRev, char) {
+  //   return char + strRev;
+  // }, "");
+
+
+  // Reduce -- Arrow Function
+  return str.split("").reduce((strRev, char) => char + strRev, "");
 }
 
 
