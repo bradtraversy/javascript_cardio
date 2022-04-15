@@ -78,6 +78,13 @@ function isPalindrome(str) {
   // return str == reverseString(str);
   // =================
   
+  // Contributed Solution 
+  // By Yash Jagtap
+  // if (str === reverseString(str)) {
+  //    return true;
+  //  }
+  //  return false;
+  
 }
 
 // CHALLENGE 3: REVERSE AN INTEGER
