@@ -42,6 +42,11 @@ function reverseString(str) {
   // return [...str].reverse().join('');  
   // =================
   
+  // =================
+  // Contributed Solution
+  // By Yash Jagtap
+  // return str.split("").reverse().join("");
+  
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
