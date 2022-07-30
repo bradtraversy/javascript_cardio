@@ -165,6 +165,25 @@ function letterChanges(str) {
   // return str.toLowerCase().replace(/[a-z]/g, char => (
   //   char == 'z' ? 'A' : String.fromCharCode(char.charCodeAt() + 1)
   // )).replace(/[aeiou]/g, vowel => vowel.toUpperCase());
+    
+//   SOLUTION BY @m0nm
+//   const alphabet = 'abcdefghijklmnopqrstuvwxyz'.split('') /* too lazy to split it myself */
+//   const charArr = str.toLowerCase().replace(/[^a-z]/g, "").split('')
+    
+//   charArr.forEach((char, charIndex) => {
+       
+//      if (char === 'z') {
+//          charArr[charIndex] = "a"
+//      }
+      
+//      else {
+//        const index = alphabet.findIndex(alp => char === alp)
+        
+//        charArr[charIndex] = alphabet[index + 1]
+//      }
+//     })
+    
+//     return charArr.join('')
 }
 
 // Call Function
