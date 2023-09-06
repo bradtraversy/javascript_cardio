@@ -41,12 +41,27 @@ function reverseString(str) {
   // by Gamze Erol
   // return [...str].reverse().join('');  
   // =================
-  
+
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
 // Return true if palindrome and false if not
 // ex. isPalindrome('racecar') === 'true', isPalindrome('hello') == false
+
+
+// =========================================
+ // CONTRIBUTED SOLUTION
+  // by Ijaz Khan 
+// function isPalindrome(arr) {
+//   let strArr = [...arr].reduce((str, current, arrIndex, array) => {
+//     return str + array[array.length - arrIndex - 1];
+//   }, "");
+//   return strArr === arr;
+// }
+// console.log(isPalindrome("racecar"));
+
+// ==================================
+
 
 function isPalindrome(str) {
   // CONTRIBUTED SOLUTION
