@@ -41,7 +41,16 @@ function reverseString(str) {
   // by Gamze Erol
   // return [...str].reverse().join('');  
   // =================
-  
+
+  // =================
+  // CONTRIBUTED SOLUTION
+  // by Lalit Kumar
+  // if (str === '') {
+  //   return '';
+  // } else {
+  //   return reverseString(str.substr(1)) + str.charAt(0);
+  // }
+  // ==================
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
@@ -77,6 +86,13 @@ function isPalindrome(str) {
   // by Gamze Erol
   // return str == reverseString(str);
   // =================
+
+  // =================
+  // CONTRIBUTED SOLUTION
+  // by Lalit Kumar
+  // const newStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  // return newStr.split('').every((char, index) => char === newStr[newStr.length - 1 - index]);
+  // ==================
   
 }
 
