@@ -41,7 +41,16 @@ function reverseString(str) {
   // by Gamze Erol
   // return [...str].reverse().join('');  
   // =================
-  
+
+  // =================
+  // CONTRIBUTED SOLUTION
+  // by Lalit Kumar
+  // if (str === '') {
+  //   return '';
+  // } else {
+  //   return reverseString(str.substr(1)) + str.charAt(0);
+  // }
+  // ==================
 }
 
 // CHALLENGE 2: VALIDATE A PALINDROME
@@ -77,6 +86,13 @@ function isPalindrome(str) {
   // by Gamze Erol
   // return str == reverseString(str);
   // =================
+
+  // =================
+  // CONTRIBUTED SOLUTION
+  // by Lalit Kumar
+  // const newStr = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+  // return newStr.split('').every((char, index) => char === newStr[newStr.length - 1 - index]);
+  // ==================
   
 }
 
@@ -131,7 +147,15 @@ function capitalizeLetters(str) {
     //return str.split(' ').map(s => 
     //    s[0].toUpperCase() + s.substring(1)).join(' ');
     //===============================
-    
+
+    // CONTRIBUTED SOLUTION
+    // by Lalit Kumar
+    // return str
+    // .split(" ")
+    // .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+    // .join(" ");
+
+    //===============================//
 }
 
 // CHALLENGE 5: MAX CHARACTER
@@ -427,6 +451,13 @@ function fizzBuzz() {
     //     else if (i % 3 === 0) console.log('Fizz');
     //     else if (i % 5 === 0) console.log('Buzz');        
     //     else console.log(i);         
+    // }
+
+    // CONTRIBUTED SOLUTION
+    // By Lalit Kumar
+    // for (let i = 1; i <= 100; i++) {
+    //   const output = (i % 3 === 0 ? "Fizz" : "") + (i % 5 === 0 ? "Buzz" : "");
+    //   console.log(output || i);
     // }
   
 }
