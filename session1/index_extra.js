@@ -94,6 +94,13 @@ function isPalindrome(str) {
   // return newStr.split('').every((char, index) => char === newStr[newStr.length - 1 - index]);
   // ==================
   
+  // Contributed Solution 
+  // By Yash Jagtap
+  // if (str === reverseString(str)) {
+  //    return true;
+  //  }
+  //  return false;
+  
 }
 
 // CHALLENGE 3: REVERSE AN INTEGER
