@@ -126,9 +126,9 @@ function evenOddSums(arr) {
     let sumEven = 0 ; 
     let SumOdd = 0 ; 
     for(i of arr){
-        i % 2 == 0 ? SumOdd +=i : sumEven +=i
+        i % 2 == 0 ? SumEven +=i : sumOdd +=i
     }
-    return [SumOdd , sumEven]
+    return [SumEven , sumOdd]
 }
 console.log(evenOddSums([50, 60, 60, 45, 71]))
 
