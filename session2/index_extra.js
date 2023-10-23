@@ -46,6 +46,18 @@ function flattenArray(arrays) {
     // }, []);
 }
 
+// SOLUTION by VeNoM to flattenArray
+const flattenArrayRecursive = (arr = [], flatArray = []) => {
+    arr.forEach((element) => {
+        if (Array.isArray(element)) {
+            flattenArrayRecursive(element, flatArray)
+        } else {
+            flatArray.push(element)
+        }
+    })
+    return flatArray
+}
+
 // CHALLENGE 4: ANAGRAM
 // Return true if anagram and false if not
 // ex. 'elbow' === 'below'
