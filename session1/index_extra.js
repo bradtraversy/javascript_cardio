@@ -4,6 +4,12 @@
 // ex. reverseString('hello') === 'olleh'
 
 function reverseString(str) {
+  
+  // CONTRIBUTED SOLUTION
+  // By Mateus Kuritza
+  // return str.split("").reverse().join("");
+  // =================
+  
   // CONTRIBUTED SOLUTION
   // let arr = [...str];
   // let newArr = arr.map((_, i, arr) => {
