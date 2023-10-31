@@ -17,21 +17,26 @@ function longestWord(sen) {}
 // ex. chunkArray([1, 2, 3, 4, 5, 6, 7], 2) === [[1, 2],[3, 4],[5, 6],[7]]
 
 function chunkArray(arr, len) {
-    // SOLUTION BY Jawad Mohammad
-    // return arr.reduce((acc, cv, ci, array) => {
-    //     if (ci % len === 0 ) {
-    //         acc.push(array.slice(ci, ci+len));
-    //     }
-    //     return acc;
-    // }, []);
-    
-    // ----- SOLUTION BY Jon Bodnar ----- //
-    // const chunked = [];
-    // while (arr.length) {
-    //     chunked.push(arr.splice(0, len));
-    // }
-    // return chunked;
-    // ----- END ----- // 
+  // SOLUTION BY Jawad Mohammad
+  // return arr.reduce((acc, cv, ci, array) => {
+  //     if (ci % len === 0 ) {
+  //         acc.push(array.slice(ci, ci+len));
+  //     }
+  //     return acc;
+  // }, []);
+  // ----- SOLUTION BY Jon Bodnar ----- //
+  // const chunked = [];
+  // while (arr.length) {
+  //     chunked.push(arr.splice(0, len));
+  // }
+  // return chunked;
+  // ----- END ----- //
+  // Solution by Lalit Kumar
+  // const chunkedArr = [];
+  // for (let i = 0; i < arr.length; i += len) {
+  //   chunkedArr.push(arr.slice(i, i + len));
+  // }
+  // return chunkedArr;
 }
 
 // CHALLENGE 3: FLATTEN ARRAY
@@ -39,11 +44,11 @@ function chunkArray(arr, len) {
 // ex. [[1, 2], [3, 4], [5, 6], [7]] = [1, 2, 3, 4, 5, 6, 7]
 
 function flattenArray(arrays) {
-    // SOLUTION BY Jawad Mohammad
-    // return arrays.reduce((acc, cv) => {
-    //     acc.push(...cv);
-    //     return acc;
-    // }, []);
+  // SOLUTION BY Jawad Mohammad
+  // return arrays.reduce((acc, cv) => {
+  //     acc.push(...cv);
+  //     return acc;
+  // }, []);
 }
 
 // CHALLENGE 4: ANAGRAM
@@ -61,9 +66,9 @@ function isAnagram(str1, str2) {}
 function letterChanges(str) {}
 
 // Call Function
-const output = longestWord("Hello there, my name is Brad");
+const output = longestWord("Hello there, my name is Brad")
 
-console.log(output);
+console.log(output)
 ////// INSTRUCTIONS /////
 // ADD YOUR SOLUTIONS HERE
 // COMMENT YOUR SOLUTION OUT BEFORE YOU MAKE A PULL REQUEST
@@ -117,10 +122,8 @@ function chunkArray(arr, len) {
   // return Array.from({ length: Math.ceil(arr.length / len) }, (v, i) =>
   // arr.slice(i * len, i * len + len)
   // );
-
   // SOLUTION BY @jerryakpera
   // const chunks = []
-
   // while (arr.length >= len) {
   //   chunks.push(arr.splice(0, len))
   // }
@@ -165,30 +168,23 @@ function letterChanges(str) {
   // return str.toLowerCase().replace(/[a-z]/g, char => (
   //   char == 'z' ? 'A' : String.fromCharCode(char.charCodeAt() + 1)
   // )).replace(/[aeiou]/g, vowel => vowel.toUpperCase());
-    
-//   SOLUTION BY @m0nm
-//   const alphabet = 'AbcdEfghIjklmnOpqrstUvwxyz'.split('') /* too lazy to split it myself */
-//   const charArr = str.toLowerCase().replace(/[^a-z]/g, "").split('')
-    
-//   charArr.forEach((char, charIndex) => {
-       
-//      if (char === 'z') {
-//          charArr[charIndex] = "A"
-//      }
-      
-//      else {
-//        const index = alphabet.findIndex(alp => char === alp)
-        
-//        charArr[charIndex] = alphabet[index + 1]
-//      }
-//     })
-
-//     const newStr = charArr.join('').replace(/([aeiou])/g, match => match.toUpperCase())
-    
-//     return charArr.join('')
+  //   SOLUTION BY @m0nm
+  //   const alphabet = 'AbcdEfghIjklmnOpqrstUvwxyz'.split('') /* too lazy to split it myself */
+  //   const charArr = str.toLowerCase().replace(/[^a-z]/g, "").split('')
+  //   charArr.forEach((char, charIndex) => {
+  //      if (char === 'z') {
+  //          charArr[charIndex] = "A"
+  //      }
+  //      else {
+  //        const index = alphabet.findIndex(alp => char === alp)
+  //        charArr[charIndex] = alphabet[index + 1]
+  //      }
+  //     })
+  //     const newStr = charArr.join('').replace(/([aeiou])/g, match => match.toUpperCase())
+  //     return charArr.join('')
 }
 
 // Call Function
-const output = longestWord("Hello there, my name is Brad");
+const output = longestWord("Hello there, my name is Brad")
 
-console.log(output);
+console.log(output)
